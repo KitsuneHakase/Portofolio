@@ -1,0 +1,87 @@
+body {
+    background-image: url(/asset/images/fondcontact.svg) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 100vh;
+}
+
+.titre {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    position: relative;
+    top: 100px;
+    color: #988686 !important;
+    width: 10%;
+    margin-bottom: 40px;
+}
+
+h4 {
+    background-color: #b9b1b1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 40px !important;
+    box-shadow: 10px 10px 10px #988686;
+}
+
+.container {
+    position: relative;
+    margin-top: 150px;
+}
+
+#boxprojets, #boxprojets h1, #boxprojets h2, #boxprojets h3, #boxprojets iframe {
+    margin: 20px 0px;
+}
+
+iframe {
+    height: 400px;
+    width: 50% !important;
+}
+
+img {
+    width: 90%;
+}
+
+@media screen and (min-width:1000px) {
+    #boxprojects .row {
+        
+    }
+}
+
+#imagehtml {
+
+}
+
+#imagehtml img:hover {
+    z-index: 10;
+    transform: scale(2);
+    margin-bottom: 100px;
+
+}
+
+#exercice1, #exercice2, #exercice3 {
+    border: red 2px solid;
+
+
+}
+
+
+
+#exercice1 {
+    left: 10%;
+    top: 5px;
+}
+
+#exercice2 {
+    right: 10%;
+    top: 50px;
+}
+
+#exercice3 {
+    left: 10%;
+    top: 100px;
+}

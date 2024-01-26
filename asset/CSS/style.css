@@ -1,0 +1,392 @@
+* {
+    scroll-behavior: smooth;  
+
+}
+
+
+body {
+    background-color: black !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 5;
+    background-color: #5C4E4E important;
+    border-radius: 0px 0px 10px 0px;
+}
+
+#navbar a {
+    color:#e8e8e8 important;
+    transition: ease-in-out 2s;    
+}
+
+#navbar a:hover {
+    color:#e8e8e8 important;
+    font-size: 20px;
+}
+
+
+a {
+    text-decoration:none;
+    color: white;
+}
+
+#conteneurentete {
+    color: unset;
+    text-decoration: unset;
+}
+
+#menu {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 3;
+}
+
+#menu div {
+    position: sticky;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100px;
+    align-items: center;
+
+}
+
+#menu div div {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#menuicon img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#menupage {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#menupage li {
+    display: flex;
+    justify-content: center;
+    padding: 4px 2px;
+}
+
+#menupage li a:hover {
+    color: #988686;
+}
+
+#menupage a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+#menu:hover #menupage {
+    display: flex;
+    flex-direction: column;
+}
+
+#menuicon:hover #menupage {
+    display: none;
+}
+
+/* Page Acceuil */
+
+.nav .nav-link {
+    color: white;
+}
+
+
+
+#navbar-example3 {
+    position: sticky;
+    top: 30%;
+}
+
+#conteneurenteteimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/asset/images/acceuil/fondintro2test.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    
+}
+
+#conteneurenteteimage img {
+    width: 100vw; 
+    position: absolute; 
+    margin-top: 100px; 
+    transition: transform 0.5s ease;
+}
+
+.objets {
+    width: 100vw;
+}
+/*
+.eastereggs {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    width: 50px;
+    height: 50px;
+    border: 1px  solid;
+    transition: transform 0.5s ease;
+    z-index: 10;
+}
+
+.eastereggs:hover + .objets {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    width: 50px;
+    height: 50px;
+    border: 1px red solid;
+    transform: rotate(80deg);
+    z-index: 10;
+
+}
+*/
+
+
+#conteneurenteteimage h1, #conteneurenteteimage h2 {
+    color: #e8e8e8;
+    z-index: 1;
+    font-size: 50px;
+
+    transition: ease-in-out 2s;
+
+}
+
+#conteneurenteteimage h1:hover, #conteneurenteteimage h2:hover {
+    font-size: 60px;
+} 
+
+.sectionpresentation {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 30px;
+    box-shadow: 2px 2px ;
+}
+
+.boitesectionpresentation {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#imgetude {
+    background-image: url('/asset/images/acceuil/etude.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    border-radius: 10px;
+    background-position: center;
+}
+
+#imgexperience {
+    background-image: url('/asset/images/acceuil/eau.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    border-radius: 10px;
+    background-position: center;
+}
+
+#imgreconversion {
+    background-image: url('/asset/images/acceuil/informatique.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    border-radius: 10px;
+    background-position: center;
+}
+
+
+#carouselExampleIndicators {
+    height: 100vh;
+}
+
+#carouselExampleCaptions, .carousel-inner {
+    height: 100vh
+}
+
+.carousel-item img {
+    opacity: 0.3;
+    background-color: black;
+    height: 100vh;
+}
+
+.carousel-caption ul {
+    list-style-type: none;
+
+}
+
+.carousel-caption ul a {
+    color: unset;
+    text-decoration: unset;
+}
+
+.carousel-caption ul a:hover {
+    color: #988686;
+    text-decoration: unset;
+}
+
+/**
+#cadre {
+    position: fixed;    
+    height: 100vh;
+    width: 100%;
+    background-image: url("/asset/images/cadre.png");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    z-index: 2;
+    
+}
+
+/*
+#cadre {
+    position:fixed;    
+    height: 100vh;
+    width: 95vw;
+    padding: 20px;
+    color: white; Couleur du texte pour une meilleure lisibilité 
+    border: 5px solid;
+    animation: borderAnimation 10s linear infinite alternate;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left 0;
+}
+
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: orange;
+    }
+    50% {
+        border-color: yellow;
+    }
+    75% {
+        border-color: green;
+    }
+    100% {
+        border-color: red;
+    }
+}
+**/
+
+/*Acceuil**/
+
+
+/*
+#presentation {
+    position: relative;
+    bottom: 200px;
+}
+*/
+
+
+/*
+#presentation {
+    position: relative;
+    left: 20px;
+
+}
+
+#presentation div {
+    border: white solid 2px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0px;
+    box-shadow: 2px 2px;
+    width: 70%;
+}
+
+.sectionpresentation {
+    position: relative;
+
+}
+
+
+
+#presentation div div {
+    width: 80%;
+    display: flex;
+    margin: 20px 0px;
+    border: none;
+    box-shadow: none;
+
+}
+
+#presentation div div:hover #presentation div div div {
+    display: block;
+    
+} 
+
+
+#presentation div div div {
+    width: 20%;
+    height: 150px;
+    margin: 0% 2%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+
+
+}
+
+#presentation div div img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 20px;
+    box-shadow: 2px 2px;
+
+
+}
+
+#presentation div p {
+    width: 80%;
+    height: 100%;
+    padding: 0% 2%;
+}
+
+*/
+
+#langages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Scroll with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body style="height: 100vh;">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/asset/images/acceuil/etude.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/asset/images/acceuil/eau.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/asset/images/acceuil/informatique.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Ajouter un écouteur d'événements pour le défilement de la molette
+            window.addEventListener('wheel', function(e) {
+                e.preventDefault(); // Empêcher le défilement par défaut
+                
+                // Déterminer la direction du défilement
+                var delta = e.deltaY || e.detail || e.wheelDelta;
+
+                // Trouver l'élément suivant
+                var currentSection = document.querySelector('.active-section');
+                var nextSection = null;
+
+                if (delta > 0 && currentSection.nextElementSibling) {
+                    nextSection = currentSection.nextElementSibling;
+                } else if (delta < 0 && currentSection.previousElementSibling) {
+                    nextSection = currentSection.previousElementSibling;
+                }
+
+                // Faire défiler de manière fluide vers l'élément suivant
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+
+                    // Mettre à jour la classe active-section
+                    currentSection.classList.remove('active-section');
+                    nextSection.classList.add('active-section');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
