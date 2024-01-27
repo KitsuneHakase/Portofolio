@@ -3,9 +3,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
     height: 100vh;
+    background-color: white !important;
 }
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
 
 .titre {
     display: flex;
@@ -15,18 +21,22 @@ body {
 h1 {
     position: relative;
     top: 100px;
-    color: #988686 !important;
-    width: 10%;
+    color: #5C4E4E !important;
     margin-bottom: 40px;
 }
 
-h4 {
-    background-color: #b9b1b1;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 40px !important;
-    box-shadow: 10px 10px 10px #988686;
+#stage {
+    width: 130px;
 }
+
+#html {
+    width: 110px;
+}
+
+#css {
+    width: 100px;
+}
+
 
 .container {
     position: relative;
@@ -40,48 +50,69 @@ h4 {
 iframe {
     height: 400px;
     width: 50% !important;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
 }
 
 img {
     width: 90%;
-}
-
-@media screen and (min-width:1000px) {
-    #boxprojects .row {
-        
-    }
+    box-shadow: 3px 3px 10px black;
 }
 
 #imagehtml {
-
+    position: relative ;
+    display: flex; 
+    height: 500px;
 }
 
-#imagehtml img:hover {
+#exercice1:hover, #exercice2:hover, #exercice3:hover  {
     z-index: 10;
-    transform: scale(2);
+    transform: scale(2.5);
     margin-bottom: 100px;
 
 }
 
 #exercice1, #exercice2, #exercice3 {
-    border: red 2px solid;
-
-
+    position: absolute; 
+    width: 200px;
 }
 
 
 
 #exercice1 {
-    left: 10%;
-    top: 5px;
+    left: 40%;
+    top: 15%;
 }
 
 #exercice2 {
-    right: 10%;
-    top: 50px;
+    right: 40%;
+    top: 25%;
 }
 
 #exercice3 {
+    left: 35%;
+    top: 40%;
+}
+
+.text {
+    position: relative;
     left: 10%;
-    top: 100px;
+}
+
+.text p {
+    width: 70%;
+}
+
+
+@media screen and (max-width:750px) {
+    #exercice1, #exercice2, #exercice3 {
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (max-width:450px) {
+    #exercice1, #exercice2, #exercice3 {
+        transform: scale(1.3);
+        width: 100px;
+    }
 }

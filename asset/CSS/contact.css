@@ -4,6 +4,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: white !important;
+    width: 100wh;
 }
 
 .titre {
@@ -11,9 +13,6 @@ body {
     justify-content: center;
 }
 
-h1 {
-    width: 10%;
-}
 
 #bloccontact {
     display: flex;
@@ -31,8 +30,8 @@ form {
 .titre h1 {
     position: relative;
     top: 100px;
-    color: #988686;
-
+    color: #5C4E4E;
+ width: 120px;
 }
 
 #formulaire {
@@ -63,7 +62,6 @@ form {
 
 #formulaire button:hover {
     background-color: #D1D0D0 !important;
-    border: none;
     color: #5C4E4E;
 }
 
@@ -93,3 +91,67 @@ fieldset {
 
 
  
+
+
+#boiteboutoncontact {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration:none
+}
+
+#boiteboutoncontact a {
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(199, 199, 199, 0.613);
+    background-color: #988686;
+    color: #e8e8e8;
+    border: 0px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration:none
+
+}
+
+#boiteboutoncontact a:hover {
+    background-color: #D1D0D0 !important;
+    color: #5C4E4E !important;
+}
+
+#boiteboutoncontact img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Responsive */
+
+@media screen and (max-width:425px) {
+    #formulaire {
+        width: 90%;
+    }
+
+    form {
+        position: relative;
+        top: -100px;
+    }
+
+    .titre h1 {
+        top: 30px;
+    }
+
+    #boiteboutoncontact {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+
+
+}
+
+@media screen and (max-width:800px) {
+    #formulaire {
+        width: 80%;
+    }
+}
